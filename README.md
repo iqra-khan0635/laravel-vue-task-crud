@@ -17,8 +17,6 @@ Install all the dependencies using composer
 
 Copy the example env file and make the required configuration changes in the .env file
 
-    cp .env.example .env
-
 Generate a new application key
 
     php artisan key:generate
@@ -27,6 +25,14 @@ Run the database migrations (**Set the database connection in .env before migrat
 
     php artisan migrate
 
+For run the database seed
+
+    php artisan db:seed
+
+For run the database test
+
+    php artisan test
+
 Start the local development server
 
     npm run dev
@@ -34,6 +40,3 @@ Start the local development server
 
 You can now access the server at http://localhost:{port}
 
-for Run the database test
-
-    php artisan test

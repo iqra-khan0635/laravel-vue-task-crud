@@ -1,42 +1,93 @@
-# Getting Started
+# Task Management Web Application
+
+The Task Management Web Application is a simple web-based task management system built with Laravel and Vue.js. It allows to manage their tasks by adding, viewing, updating, and deleting tasks.
+
+![Screenshot 1](screenshot_1.png)
+![Screenshot 2](screenshot_2.png)
+
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Features](#features)
+- [Running the Application](#running-the-application)
+- [Running Database Seed](#running-db-seed)
+- [Running Unit Tests](#running-unit-tests)
+- [API Endpoints](#api-endpoints)
 
 ## Installation
 
-Clone the repository
+1. Clone the repository:
 
-    https://github.com/iqra-khan0635/laravel-vue-task-crud.git
+```bash
+git clone https://github.com/iqra-khan0635/laravel-vue-task-crud.git
+cd laravel-vue-task-crud
+```
 
-Go to the repository folder
+2. Install the PHP and JavaScript dependencies:
 
-    cd laravel-vue-task-crud
+``` bash
+composer install
+npm install
+```
 
-Install all the dependencies using composer
+3. Create a copy of the .env.example file and rename it to .env:
 
-    composer install
-    npm install
+```bash
+cp .env.example .env
+```
 
-Copy the example env file and make the required configuration changes in the .env file
+4. Generate the application key:
 
-Generate a new application key
+```bash 
+php artisan key:generate
+```
 
-    php artisan key:generate
+# Features
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+- View all tasks in the system, showing their titles description, due dates and status.
+- Add new tasks with title, description, and due date fields.
+- Update existing tasks directly from the front end.
+- Delete tasks from the system.
 
-    php artisan migrate
+# Running the Application
 
-For run the database seed
+To start the development server, run the following command:
 
-    php artisan db:seed
+```bash
+npm run dev
+php artisan serve
+```
+   
+The application will be accessible at http://localhost:8000 in your web browser.
 
-For run the database test
+# Running DB Seed
 
-    php artisan test
+To execute the seed, use the following command:
 
-Start the local development server
+```bash
+php artisan db:seed
+```
 
-    npm run dev
-    php artisan serve
+# Running Unit Tests
 
-You can now access the server at http://localhost:{port}
+To execute the unit tests, use the following command:
+
+```bash
+php artisan test
+```
+The tests will run, and you should see the output indicating if they passed or failed.
+
+# API Endpoints
+
+The application exposes the following API endpoints for managing tasks:
+
+- `GET /api/tasks`: Fetches a list of all tasks.
+- `POST /api/tasks`: Creates a new task. Payload should contain **title**, **description**, **due_date**, and **status**.
+- `GET /api/tasks/{id}`: Fetches a single task by its ID.
+- `PUT /api/tasks/{id}`: Updates an existing task. Payload should contain **title**, **description**, **due_date**, and **status**.
+- `DELETE /api/tasks/{id}`: Deletes a task by its ID.
+
+
+
 

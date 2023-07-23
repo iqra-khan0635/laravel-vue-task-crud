@@ -2,8 +2,8 @@
 
 The Task Management Web Application is a simple web-based task management system built with Laravel and Vue.js. It allows to manage their tasks by adding, viewing, updating, and deleting tasks.
 
-![Screenshot 1](screenshot_1.png)
-![Screenshot 2](screenshot_2.png)
+![Screenshot 1](Screenshot_1.png)
+![Screenshot 2](Screenshot_2.png)
 
 
 ## Table of Contents
